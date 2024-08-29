@@ -1,0 +1,41 @@
+shoppinglist = []
+
+def additem(item:str):
+    shoppinglist.append(item)
+    print("Added")
+    
+def searchitem(item:str):
+    if item in shoppinglist:
+        return True
+    else :
+        return False
+
+def removeitem(item:str):
+    shoppinglist.remove(item)
+    print("Item removed")
+
+def sor():
+    shoppinglist.sort()
+
+int = 1
+while(int!=-1):
+    int = input("Enter what you want to do \n1)Add\n2)Remove\n3)Search\n4)Display\n5)Sort\n-1)Exit\n")
+    if  int == '1':
+        inpu = input("Enter what you want to add\n")
+        additem(inpu)
+    elif int == '2':
+        inpu = input("Enter what you want to remove\n")
+        removeitem(inpu)
+    elif int == '3':
+        inpu = input("What you want to search\n")
+        print(searchitem(inpu))
+    elif int == '4':
+        print(shoppinglist)
+    elif int == '5':
+        sor()
+    elif int == '-1':
+        exit(0)
+    else :
+        print("Invalid")
+
+    
